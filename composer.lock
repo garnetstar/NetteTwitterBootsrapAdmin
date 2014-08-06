@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b1f609cfabc9505256c3582716b5ddfb",
+    "hash": "23a6b472b7e893b02568c3a966a9e2d6",
     "packages": [
         {
             "name": "dg/adminer-custom",
@@ -74,6 +74,75 @@
                 "nette"
             ],
             "time": "2014-06-27 16:31:39"
+        },
+        {
+            "name": "kdyby/rabbitmq",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/RabbitMq.git",
+                "reference": "23ebe6cb60c20464ea0ec72e9380c57a2be31ead"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kdyby/RabbitMq/zipball/23ebe6cb60c20464ea0ec72e9380c57a2be31ead",
+                "reference": "23ebe6cb60c20464ea0ec72e9380c57a2be31ead",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "~2.1@dev",
+                "videlalvaro/php-amqplib": "~2.4.0@dev"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "~0.7",
+                "kdyby/console": "dev-master",
+                "mockery/mockery": "~0.9.1",
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\RabbitMq\\": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/RabbitMq/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla"
+                },
+                {
+                    "name": "Filip Procházka",
+                    "email": "filip@prochazka.su",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Integrates php-amqplib with RabbitMq and Nette Framework",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "AMQP",
+                "bunny",
+                "kdyby",
+                "message",
+                "messaging",
+                "nette",
+                "queue",
+                "rabbit",
+                "rabbitmq"
+            ],
+            "time": "2014-07-27 22:51:47"
         },
         {
             "name": "latte/latte",
@@ -1305,6 +1374,59 @@
                 "nette"
             ],
             "time": "2014-07-22 09:00:36"
+        },
+        {
+            "name": "videlalvaro/php-amqplib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/videlalvaro/php-amqplib.git",
+                "reference": "d2b8a292f709b79b1615bef87b1b89bde4c7c347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/d2b8a292f709b79b1615bef87b1b89bde4c7c347",
+                "reference": "d2b8a292f709b79b1615bef87b1b89bde4c7c347",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-sockets": "Use AMQPSocketConnection"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpAmqpLib": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla"
+                }
+            ],
+            "description": "This library is a pure PHP implementation of the AMQP protocol. It's been tested against RabbitMQ.",
+            "homepage": "https://github.com/videlalvaro/php-amqplib/",
+            "keywords": [
+                "message",
+                "queue",
+                "rabbitmq"
+            ],
+            "time": "2014-07-14 13:24:24"
         }
     ],
     "packages-dev": [
@@ -1366,15 +1488,20 @@
             "time": "2014-07-07 21:12:59"
         }
     ],
-    "aliases": [],
+    "aliases": [
+
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "nette/nette": 20,
-        "kdyby/bootstrap-form-renderer": 20
+        "kdyby/bootstrap-form-renderer": 20,
+        "kdyby/rabbitmq": 20
     },
     "prefer-stable": false,
     "platform": {
         "php": ">= 5.3.7"
     },
-    "platform-dev": []
+    "platform-dev": [
+
+    ]
 }

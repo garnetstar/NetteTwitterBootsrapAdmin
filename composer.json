@@ -18,7 +18,8 @@
 		"php": ">= 5.3.7",
 		"nette/nette": "~2.2@dev",
 		"dg/adminer-custom": "~1.5",
-        "kdyby/bootstrap-form-renderer": "dev-master"
+       		"kdyby/bootstrap-form-renderer": "dev-master",
+		"kdyby/rabbitmq": "0.1.*@dev"
 	},
 	"require-dev": {
 		"nette/tester": "~1.0"
