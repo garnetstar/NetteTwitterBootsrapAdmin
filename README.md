@@ -1,3 +1,3 @@
 NetteTwitterBootsrapAdmin
 =========================
-only for testing
+only for testing of GIT
