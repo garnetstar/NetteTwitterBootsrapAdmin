@@ -18,4 +18,6 @@ $configurator->addConfig(__DIR__ . '/config/config.local.neon');
 
 $container = $configurator->createContainer();
 
+\Kdyby\RabbitMq\DI\RabbitMqExtension::register($container);
+
 return $container;

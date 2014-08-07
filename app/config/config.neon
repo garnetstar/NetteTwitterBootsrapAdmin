@@ -24,3 +24,6 @@ nette:
 services:
 	- App\Model\UserManager
 	router: App\RouterFactory()::createRouter
+
+includes:
+	-rabbitmq.neon
