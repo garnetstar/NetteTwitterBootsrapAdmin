@@ -22,8 +22,12 @@ nette:
 
 
 services:
-	- App\Model\UserManager
+#	- App\Model\UserManager
 	router: App\RouterFactory()::createRouter
 
 includes:
-	-rabbitmq.neon
+	- rabbitmq.neon
+
+
+console:
+    url: http://www.kdyby.org

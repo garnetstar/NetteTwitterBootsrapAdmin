@@ -19,7 +19,8 @@
 		"nette/nette": "~2.2@dev",
 		"dg/adminer-custom": "~1.5",
        		"kdyby/bootstrap-form-renderer": "dev-master",
-		"kdyby/rabbitmq": "0.1.*@dev"
+		"kdyby/rabbitmq": "0.1.*@dev",
+        "kdyby/console": "2.3.*@dev"
 	},
 	"require-dev": {
 		"nette/tester": "~1.0"

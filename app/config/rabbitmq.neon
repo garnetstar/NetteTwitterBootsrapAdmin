@@ -5,8 +5,3 @@ rabbitmq:
 		user: 'guest'
 		password: 'guest'
 		vhost: '/'
-
-producers:
-	testMessager:
-		connection: default
-		exchange: {name:'test-message', type:direct}

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "23a6b472b7e893b02568c3a966a9e2d6",
+    "hash": "a06128f0e076959f1b7e1fe2d1839bc2",
     "packages": [
         {
             "name": "dg/adminer-custom",
@@ -74,6 +74,87 @@
                 "nette"
             ],
             "time": "2014-06-27 16:31:39"
+        },
+        {
+            "name": "kdyby/console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Console.git",
+                "reference": "c4f22fea7e256eb20cfc62555c74d37a60c434ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kdyby/Console/zipball/c4f22fea7e256eb20cfc62555c74d37a60c434ed",
+                "reference": "c4f22fea7e256eb20cfc62555c74d37a60c434ed",
+                "shasum": ""
+            },
+            "require": {
+                "nette/application": "~2.2@dev",
+                "nette/di": "~2.2@dev",
+                "nette/http": "~2.2@dev",
+                "symfony/console": "~2.5"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "~0.7",
+                "kdyby/events": "@dev",
+                "latte/latte": "~2.2@dev",
+                "nette/bootstrap": "~2.2@dev",
+                "nette/caching": "~2.2@dev",
+                "nette/component-model": "~2.2@dev",
+                "nette/database": "~2.2@dev",
+                "nette/finder": "~2.2@dev",
+                "nette/forms": "~2.2@dev",
+                "nette/mail": "~2.2@dev",
+                "nette/neon": "~2.2@dev",
+                "nette/nette": "~2.2@dev",
+                "nette/php-generator": "~2.2@dev",
+                "nette/reflection": "~2.2@dev",
+                "nette/robot-loader": "~2.2@dev",
+                "nette/safe-stream": "~2.2@dev",
+                "nette/security": "~2.2@dev",
+                "nette/tester": "@dev",
+                "nette/tokenizer": "~2.2@dev",
+                "nette/utils": "~2.2@dev",
+                "symfony/event-dispatcher": "~2.4",
+                "tracy/tracy": "~2.2@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Console\\": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/Console/CliPresenter.php",
+                    "src/Kdyby/Console/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "email": "filip@prochazka.su",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Symfony Console integration for Kdyby components",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "console",
+                "kdyby",
+                "nette"
+            ],
+            "time": "2014-07-27 16:09:23"
         },
         {
             "name": "kdyby/rabbitmq",
@@ -621,12 +702,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "b8210f01ac27ecb34b2c3c7037c1509ea1d12a05"
+                "reference": "347c5454b9d688b3b4f47f8437a08c3f1042f0cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/b8210f01ac27ecb34b2c3c7037c1509ea1d12a05",
-                "reference": "b8210f01ac27ecb34b2c3c7037c1509ea1d12a05",
+                "url": "https://api.github.com/repos/nette/forms/zipball/347c5454b9d688b3b4f47f8437a08c3f1042f0cb",
+                "reference": "347c5454b9d688b3b4f47f8437a08c3f1042f0cb",
                 "shasum": ""
             },
             "require": {
@@ -672,7 +753,7 @@
             ],
             "description": "Nette Forms: greatly facilitates web forms",
             "homepage": "http://nette.org",
-            "time": "2014-07-20 23:03:33"
+            "time": "2014-08-07 01:49:24"
         },
         {
             "name": "nette/http",
@@ -738,12 +819,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/mail.git",
-                "reference": "04f73d1ec43a4602003bb782abf666a308519892"
+                "reference": "4833287c42cab2bddf0d9e20d492bf5236f236a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/mail/zipball/04f73d1ec43a4602003bb782abf666a308519892",
-                "reference": "04f73d1ec43a4602003bb782abf666a308519892",
+                "url": "https://api.github.com/repos/nette/mail/zipball/4833287c42cab2bddf0d9e20d492bf5236f236a9",
+                "reference": "4833287c42cab2bddf0d9e20d492bf5236f236a9",
                 "shasum": ""
             },
             "require": {
@@ -789,7 +870,7 @@
             ],
             "description": "Nette Mail: Sending E-mails",
             "homepage": "http://nette.org",
-            "time": "2014-07-21 18:13:52"
+            "time": "2014-08-07 01:51:11"
         },
         {
             "name": "nette/neon",
@@ -1263,12 +1344,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "05e2b7f292b9e36b92388cec8d5e875b9b5faea1"
+                "reference": "24aa66a779fd3d2ac3efba296e1bca64edf3aa61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/05e2b7f292b9e36b92388cec8d5e875b9b5faea1",
-                "reference": "05e2b7f292b9e36b92388cec8d5e875b9b5faea1",
+                "url": "https://api.github.com/repos/nette/utils/zipball/24aa66a779fd3d2ac3efba296e1bca64edf3aa61",
+                "reference": "24aa66a779fd3d2ac3efba296e1bca64edf3aa61",
                 "shasum": ""
             },
             "require": {
@@ -1314,7 +1395,64 @@
             ],
             "description": "Nette Utility Classes",
             "homepage": "http://nette.org",
-            "time": "2014-07-07 20:50:38"
+            "time": "2014-08-07 01:35:28"
+        },
+        {
+            "name": "symfony/console",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "50f77fb648d248bb921321e6fcb43e0a1a9376cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/50f77fb648d248bb921321e6fcb43e0a1a9376cc",
+                "reference": "50f77fb648d248bb921321e6fcb43e0a1a9376cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-08-05 09:07:51"
         },
         {
             "name": "tracy/tracy",
@@ -1495,7 +1633,8 @@
     "stability-flags": {
         "nette/nette": 20,
         "kdyby/bootstrap-form-renderer": 20,
-        "kdyby/rabbitmq": 20
+        "kdyby/rabbitmq": 20,
+        "kdyby/console": 20
     },
     "prefer-stable": false,
     "platform": {

@@ -13,11 +13,13 @@ $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
 	->register();
 
+//$configurator->addConfig(__DIR__ . '/config/config.local.neon');
+
+
+\Kdyby\RabbitMq\DI\RabbitMqExtension::register($configurator);
+\Kdyby\Console\DI\ConsoleExtension::register($configurator);
+
 $configurator->addConfig(__DIR__ . '/config/config.neon');
-$configurator->addConfig(__DIR__ . '/config/config.local.neon');
-
 $container = $configurator->createContainer();
-
-\Kdyby\RabbitMq\DI\RabbitMqExtension::register($container);
 
 return $container;
