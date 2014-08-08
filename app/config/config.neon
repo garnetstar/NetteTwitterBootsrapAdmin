@@ -25,6 +25,13 @@ services:
 #	- App\Model\UserManager
 	router: App\RouterFactory()::createRouter
 
+	producer:
+		class: \ConsoleCommand\ProducerCommand
+		tags: [kdyby.console.command]
+	consumer:
+		class: \ConsoleCommand\ConsumerCommand
+		tags: [kdyby.console.command]
+
 includes:
 	- rabbitmq.neon
 

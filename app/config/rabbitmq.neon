@@ -5,3 +5,8 @@ rabbitmq:
 		user: 'guest'
 		password: 'guest'
 		vhost: '/'
+
+	producers:
+		uploadPicture:
+			connection: default
+			exchange: {name: 'upload-picture', type: direct}
