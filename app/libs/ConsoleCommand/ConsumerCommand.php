@@ -24,18 +24,24 @@ class ConsumerCommand extends Command
 		$connection = new AMQPConnection('localhost', 5672, 'guest', 'guest');
 		$channel = $connection->channel();
 
-		$channel->queue_declare('hello', false, false, false, false);
+        $channel->exchange_declare('logs', 'fanout', false, false, false);
 
-		echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
+        list($queue_name, ,) = $channel->queue_declare("", false, false, true, false);
 
-		$callback = function($msg) {
-			echo " [x] Received ", $msg->body, "\n";
-		};
+        $channel->queue_bind($queue_name, 'logs');
 
-		$channel->basic_consume('hello', '', false, true, false, false, $callback);
+        echo ' [*] Waiting for logs. To exit press CTRL+C', "\n";
 
-		while(count($channel->callbacks)) {
-			$channel->wait();
-		}
+        $callback = function($msg){
+            echo ' [x] ', $msg->body, "\n";
+        };
+
+        $channel->basic_consume($queue_name, '', false, true, false, false, $callback);
+
+        while(count($channel->callbacks)) {
+            $channel->wait();
+        }
+
+        $channel->close();
 	}
 } 
