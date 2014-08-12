@@ -4,6 +4,7 @@ namespace ConsoleCommand;
 
 use PhpAmqpLib\Connection\AMQPConnection;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -14,8 +15,8 @@ class ConsumerCommand extends Command
 	{
 		$this
 			->setName('admin:consumer')
-			->setDescription('Creates test consumer');
-//			->addArgument('name', InputArgument::REQUIRED, 'Producer Name')
+			->setDescription('Creates test consumer')
+			->addArgument('consumerID', InputArgument::REQUIRED, 'consumerID');
 //			->addOption('debug', 'd', InputOption::VALUE_OPTIONAL, 'Enable Debugging', false);
 	}
 
@@ -24,18 +25,26 @@ class ConsumerCommand extends Command
 		$connection = new AMQPConnection('localhost', 5672, 'guest', 'guest');
 		$channel = $connection->channel();
 
-		$channel->queue_declare('hello', false, false, false, false);
+		$consumerID = $input->getArgument('consumerID');
 
-		echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
+		//$channel->queue_declare('hello', false, false, false, false);
 
-		$callback = function($msg) {
-			echo " [x] Received ", $msg->body, "\n";
+		echo " [{$consumerID}] Waiting for messages. To exit press CTRL+C", "\n";
+
+		$callback = function ($msg) use ($consumerID)
+		{
+			$message = " [{$consumerID}] Received " . $msg->body . "\n";
+			echo $message;
+			file_put_contents("logg", $message, FILE_APPEND);
 		};
 
-		$channel->basic_consume('hello', '', false, true, false, false, $callback);
+		$channel->basic_consume('garnetstar', '', false, true, false, false, $callback);
 
-		while(count($channel->callbacks)) {
-			$channel->wait();
+		while (count($channel->callbacks))
+		{
+			{
+				$channel->wait();
+			}
 		}
 	}
-} 
+}

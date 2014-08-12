@@ -31,8 +31,13 @@ class ProducerCommand extends Command
 	{
 		$connection = new AMQPConnection('localhost', 5672, 'guest', 'guest');
 		$channel = $connection->channel();
-		$channel->queue_declare('hello', false, false, false, false);
-		$msg = new AMQPMessage('Hello World!');
-		$channel->basic_publish($msg, "", "hello");
+//		$channel->queue_declare('hello', false, false, false, false);
+
+		for ($i = 1;$i <= 100;$i++)
+		{
+			usleep(1000);
+			$msg = new AMQPMessage("[{$i}]  Hello World 2!");
+			$channel->basic_publish($msg, "", "garnetstar");
+		}
 	}
 }
