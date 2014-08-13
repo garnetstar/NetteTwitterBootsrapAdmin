@@ -43,5 +43,7 @@ class ProducerCommand extends Command
 
         $channel->close();
         $connection->close();
+
+        file_put_contents('php://stdout', "Usage: $argv[0] [binding_key]\n");
     }
 }
